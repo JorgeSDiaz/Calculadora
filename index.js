@@ -65,14 +65,17 @@ function init() {
     subtract.onclick = function(e) {
         numberA = result.textContent;
         operation = "-";
+        clear();
     }
     multiplication.onclick = function(e) {
         numberA = result.textContent;
         operation = "*";
+        clear();
     }
     division.onclick = function(e) {
         numberA = result.textContent;
         operation = "/";
+        clear();
     }
     equals.onclick = function(e) {
         numberB = result.textContent;
@@ -101,12 +104,12 @@ function resolv() {
             res = parseInt(parseFloat(numberA) - parseFloat(numberB));
             break;
         case "*":
-                res = parseInt(parseFloat(numberA) * parseFloat(numberB));
-                break;
+            res = parseInt(parseFloat(numberA) * parseFloat(numberB));
+            break;
         case "/":
-                res = parseInt(parseFloat(numberA) / parseFloat(numberB));
-                break;
+            res = parseInt(parseFloat(numberA) / parseFloat(numberB));
+            break;
     }
-    reset();
+    resett();
     result.textContent = res;
 }
